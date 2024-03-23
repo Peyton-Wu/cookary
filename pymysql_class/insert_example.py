@@ -1,12 +1,13 @@
 from database_operations_local import CookeryCommentsDB
-
+import datetime
 
 
 db = CookeryCommentsDB('localhost', 'root', '123456', 'cookery_chatbot')
+now = datetime.datetime.now()
+formatted_time = now.strftime("%Y-%m-%d %H:%M:%S")
+db.insert_comment(13, 114514, formatted_time,'Hamburger(beef)','I will definitely try it again!')
 
-db.insert_comment(11, 'practicality', 'Very useful cooking tips that allow me to cook and eat dinner half an hour earlier every day when I get home from work.')
-
-comment = db.get_comment(11)
+comment = db.get_comment(13)
 print(comment)
 
 all_comments = db.get_all_comments()
