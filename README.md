@@ -1,4 +1,4 @@
-# Cookary
+# Cookery
 Group project for COMP7940.\
 A chatbot which acts as a platform for searching recipes and reviews from others.
 
